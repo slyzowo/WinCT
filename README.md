@@ -2,7 +2,34 @@
 A Windows Command Line Interface Tool
 
 > [!WARNING]
-> This application is in ALPHA and will be update₫ often.
+> This application is in ALPHA and will be updated often.
+
+A quick list of what commands I have and don't have working so far ^w^
+
+- ❌ winct app.open
+- ❌ winct app.uninstall
+- ❌ winct file.del
+- ❌ winct file.info
+- ❌ winct file.make
+- ❌ winct file.open
+- ❌ winct dir.del
+- ❌ winct dir.ls
+- ❌ winct dir.make
+- ❌ winct dir.open
+- ❌ winct dir.zip
+- ❌ winct sys.info
+- ✅ winct sys.lock
+- ❌ winct sys.restart
+- ❌ winct sys.shutdown
+- ❌ winct sys.sleep
+- ❌ winct sys.uptime
+- ❌ winct sys.vol
+- ✅ winct.coinflip
+- ✅ winct.diceroll
+- ❌ winct.help
+- ❌ winct.joke
+- ❌ winct.quote
+- ❌ winct.update
 
 ## App Commands
 > [!WARNING]
@@ -78,7 +105,7 @@ winct sys.vol <Number 1-100>
 
 ## WinCT Commands
 > [!WARNING]
-> These commands do not work yet.
+> Most of these commands do not work yet.
 ```
 winct winct.coinflip
 ```
@@ -93,7 +120,4 @@ winct winct.joke
 ```
 ```
 winct winct.quote
-```
-```
-winct winct.update
 ```
