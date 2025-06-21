@@ -7,10 +7,35 @@ using std::cin;
 int randnum = 0;
 
 namespace winct{
-class app{public:};
-class file{public:};
-class dir{public:};
-class system{public:};
+class app{
+  public:
+  void open(){}
+  void uninstall(){}
+};
+class file{
+  public:
+  void del(){}
+  void info(){}
+  void make(){}
+  void open(){}
+};
+class dir{
+  public:
+  void del(){}
+  void ls(){}
+  void make(){}
+  void open(){}
+  void zip(){}
+};
+class system{
+  public:
+  void info(){}
+  void restart(){}
+  void shutdown(){}
+  void sleep(){}
+  void uptime(){}
+  void vol(){}
+};
 
 class winct{ public:
 
@@ -40,18 +65,15 @@ class winct{ public:
   void help(){
     cout << "winct app.open" << '\n';
     cout << "winct app.uninstall" << '\n';
-
     cout << "winct file.del" << '\n';
     cout << "winct file.info" << '\n';
     cout << "winct file.make" << '\n';
     cout << "winct file.open" << '\n';
-
     cout << "winct dir.del" << '\n';
     cout << "winct dir.ls" << '\n';
     cout << "winct dir.make" << '\n';
     cout << "winct dir.open" << '\n';
     cout << "winct dir.zip" << '\n';
-
     cout << "winct sys.info" << '\n';
     cout << "winct sys.lock" << '\n';
     cout << "winct sys.restart" << '\n';
@@ -59,7 +81,6 @@ class winct{ public:
     cout << "winct sys.sleep" << '\n';
     cout << "winct sys.uptime" << '\n';
     cout << "winct sys.vol" << '\n';
-
     cout << "winct.coinflip" << '\n';
     cout << "winct.diceroll" << '\n';
     cout << "winct.help" << '\n';
@@ -67,6 +88,8 @@ class winct{ public:
     cout << "winct.quote" << '\n';
     cout << "winct.update" << '\n';
   }
+  void joke(){}
+  void quote(){}
 };}
 
 
@@ -80,7 +103,7 @@ int main(){
   srand(time(NULL)); // seed uses current time
   winct::winct winct;
 
-  cout << "Type in [ winct.help ] for help" << '\n';
+  cout << "Type in [ winct.help ] for commands" << '\n';
   std::getline(std::cin >> std::ws, userinput);
 
 // TODO: convert if's to switches
@@ -128,7 +151,7 @@ int main(){
   else if (userinput == "winct sys.info"){
     cout << "User Typed " << userinput << '\n';
   }
-  else if (userinput == "winct sys.lock"){
+  else if (userinput == "winct system.lock"){
     LockWorkStation();
   }
   else if (userinput == "winct sys.restart"){
@@ -160,7 +183,7 @@ int main(){
     cout << "You rolled a " << randnum << '\n';
   }
   else if (userinput == "winct.help"){
-    cout << "User Typed " << userinput << '\n';
+    winct.help();
   }
   else if (userinput == "winct.fact"){
     cout << "User Typed " << userinput << '\n';
@@ -169,9 +192,6 @@ int main(){
     cout << "User Typed " << userinput << '\n';
   }
   else if (userinput == "winct.quote"){
-    cout << "User Typed " << userinput << '\n';
-  }
-  else if (userinput == "winct.update"){
     cout << "User Typed " << userinput << '\n';
   }
   else{
