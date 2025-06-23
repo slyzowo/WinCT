@@ -86,7 +86,6 @@ class winct{ public:
     cout << "winct.help" << '\n';
     cout << "winct.joke" << '\n';
     cout << "winct.quote" << '\n';
-    cout << "winct.update" << '\n';
   }
   void joke(){}
   void quote(){}
