@@ -10,33 +10,42 @@ namespace WINCT{
 
 class App{
   public:
-  void open(){      cout << "" << '\n'; }
-  void uninstall(){ cout << "" << '\n'; }
+  void open(){      cout << "User typed winct app.open" << '\n'; }
+  void uninstall(){ cout << "User typed winct app.uninstall" << '\n'; }
 };
-  
-  class File{
-    public:
-    void del(){  cout << "" << '\n'; }
-    void info(){ cout << "" << '\n'; }
-    void make(){ cout << "" << '\n'; }
-    void open(){ cout << "" << '\n'; }
+
+class File{
+  public:
+  void del(){  cout << "User typed winct file.del" << '\n'; }
+  void info(){ cout << "User typed winct file.info" << '\n'; }
+  void make(){ cout << "User typed winct file.make" << '\n'; }
+  void open(){ cout << "User typed winct file.open" << '\n'; }
 };
+
 class Dir{
   public:
-  void del(){  cout << "" << '\n'; }
-  void ls(){   cout << "" << '\n'; }
-  void make(){ cout << "" << '\n'; }
-  void open(){ cout << "" << '\n'; }
-  void zip(){  cout << "" << '\n'; }
+  void del(){  cout << "User typed winct dir.del" << '\n'; }
+  void ls(){   cout << "User typed winct dir.ls" << '\n'; }
+  void make(){ cout << "User typed winct dir.make" << '\n'; }
+  void open(){ cout << "User typed winct dir.open" << '\n'; }
+  void zip(){  cout << "User typed winct dir.zip" << '\n'; }
 };
+
 class System{
   public:
-  void info(){     cout << "" << '\n'; }
-  void restart(){  cout << "" << '\n'; }
-  void shutdown(){ cout << "" << '\n'; }
-  void sleep(){    cout << "" << '\n'; }
-  void uptime(){   cout << "" << '\n'; }
-  void vol(){      cout << "" << '\n'; }
+  void info(){        cout << "User typed winct system.info" << '\n'; }
+
+  static void lock(){
+    if(LockWorkStation() != true){
+      cout << "winct could not lock your workstation" << '\n';
+    }
+  }
+
+  void restart(){     cout << "User typed winct system.restart" << '\n'; }
+  void shutdown(){    cout << "User typed winct system.shutdown" << '\n'; }
+  void sleep(){       cout << "User typed winct system.sleep" << '\n'; }
+  void uptime(){      cout << "User typed winct system.uptime" << '\n'; }
+  void vol(){         cout << "User typed winct system.vol" << '\n'; }
 };
 
 class Winct{ public:
@@ -93,8 +102,8 @@ class Winct{ public:
     cout << "winct.joke" << '\n';
     cout << "winct.quote" << '\n';
   }
-  void joke(){ cout << "" << '\n'; }
-  void quote(){ cout << "" << '\n'; }
+  void joke(){ cout <<  "User typed winct.joke" << '\n'; }
+  void quote(){ cout << "User typed winct.quote" << '\n'; }
 };}
 
 
@@ -166,7 +175,7 @@ int main(){
   }
 
   else if (userinput == "winct system.lock"){
-    LockWorkStation();
+    WINCT::System::lock();
   }
 
   else if (userinput == "winct sys.restart"){
