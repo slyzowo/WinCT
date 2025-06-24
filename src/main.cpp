@@ -4,40 +4,42 @@
 using std::cout;
 using std::cin;
 
-int randnum = 0;
+int randnum = 0; // needed to make this global as several functions require this
 
-namespace winct{
-class app{
+namespace WINCT{
+
+class App{
   public:
-  void open(){}
-  void uninstall(){}
+  void open(){      cout << "" << '\n'; }
+  void uninstall(){ cout << "" << '\n'; }
 };
-class file{
-  public:
-  void del(){}
-  void info(){}
-  void make(){}
-  void open(){}
+  
+  class File{
+    public:
+    void del(){  cout << "" << '\n'; }
+    void info(){ cout << "" << '\n'; }
+    void make(){ cout << "" << '\n'; }
+    void open(){ cout << "" << '\n'; }
 };
-class dir{
+class Dir{
   public:
-  void del(){}
-  void ls(){}
-  void make(){}
-  void open(){}
-  void zip(){}
+  void del(){  cout << "" << '\n'; }
+  void ls(){   cout << "" << '\n'; }
+  void make(){ cout << "" << '\n'; }
+  void open(){ cout << "" << '\n'; }
+  void zip(){  cout << "" << '\n'; }
 };
-class system{
+class System{
   public:
-  void info(){}
-  void restart(){}
-  void shutdown(){}
-  void sleep(){}
-  void uptime(){}
-  void vol(){}
+  void info(){     cout << "" << '\n'; }
+  void restart(){  cout << "" << '\n'; }
+  void shutdown(){ cout << "" << '\n'; }
+  void sleep(){    cout << "" << '\n'; }
+  void uptime(){   cout << "" << '\n'; }
+  void vol(){      cout << "" << '\n'; }
 };
 
-class winct{ public:
+class Winct{ public:
 
   void coinflip(){
     randnum = rand() % 2;
@@ -58,6 +60,10 @@ class winct{ public:
   }
 
   int diceroll(int dicemax, int dicemin){
+    cout << "What is the max?" << '\n';
+    cin >> dicemax;
+    cout << "What is the min?" << '\n';
+    cin >> dicemin;
     randnum = rand() % dicemax + dicemin;
     return randnum;
   }
@@ -87,20 +93,21 @@ class winct{ public:
     cout << "winct.joke" << '\n';
     cout << "winct.quote" << '\n';
   }
-  void joke(){}
-  void quote(){}
+  void joke(){ cout << "" << '\n'; }
+  void quote(){ cout << "" << '\n'; }
 };}
 
 
 int main(){
 
-// declaring all vars at the top :3
+  // declaring all vars at the top :3
   std::string userinput;
   int dicemax = 0;
   int dicemin = 0;
-
+  
   srand(time(NULL)); // seed uses current time
-  winct::winct winct;
+  WINCT::Winct winct;
+  WINCT::App app;
 
   cout << "Type in [ winct.help ] for commands" << '\n';
   std::getline(std::cin >> std::ws, userinput);
@@ -109,90 +116,102 @@ int main(){
 
 // app commands
   if (userinput == "winct app.open"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::App::open;
   }
+
   else if (userinput == "winct app.uninstall"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::App::uninstall;
   }
+
 
 // file commands
   else if (userinput == "winct file.del"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::File::del;
   }
+
   else if (userinput == "winct file.info"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::File::info;
   }
+
   else if (userinput == "winct file.make"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::File::make;
   }
+
   else if (userinput == "winct file.open"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::File::open;
   }
+
 
 // folder commands
   else if (userinput == "winct dir.del"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::Dir::del;
   }
   else if (userinput == "winct dir.ls"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::Dir::ls;
   }
   else if (userinput == "winct dir.make"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::Dir::make;
   }
   else if (userinput == "winct dir.open"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::Dir::open;
   }
   else if (userinput == "winct dir.zip"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::Dir::zip;
   }
+
 
 // system commands
   else if (userinput == "winct sys.info"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::System::info;
   }
+
   else if (userinput == "winct system.lock"){
     LockWorkStation();
   }
+
   else if (userinput == "winct sys.restart"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::System::restart;
   }
+
   else if (userinput == "winct sys.shutdown"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::System::shutdown;
   }
+
   else if (userinput == "winct sys.sleep"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::System::sleep;
   }
+
   else if (userinput == "winct sys.uptime"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::System::uptime;
   }
+
   else if (userinput == "winct sys.vol"){
-    cout << "User Typed " << userinput << '\n';
+    WINCT::System::vol;
   }
+
 
 // WINCT commands
   else if (userinput == "winct.coinflip"){
     winct.coinflip();
   }
+
   else if (userinput == "winct.diceroll"){
-    cout << "What is the max?" << '\n';
-    cin >> dicemax;
-    cout << "What is the min?" << '\n';
-    cin >> dicemin;
     winct.diceroll(dicemax, dicemin);
     cout << "You rolled a " << randnum << '\n';
   }
+
   else if (userinput == "winct.help"){
     winct.help();
   }
-  else if (userinput == "winct.fact"){
-    cout << "User Typed " << userinput << '\n';
-  }
+
   else if (userinput == "winct.joke"){
-    cout << "User Typed " << userinput << '\n';
+    winct.joke();
   }
+
   else if (userinput == "winct.quote"){
-    cout << "User Typed " << userinput << '\n';
+    winct.quote();
   }
+
   else{
     cout << "User Typed \"" << userinput << "\" which was not valid" << '\n';
   }
