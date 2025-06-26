@@ -16,51 +16,50 @@ class App{
 
 class Dir{
   public:
-  void del(std::string folderPath){  
-    cout << "User typed winct dir.del" << '\n';
+  void del(std::string userCommand){  
+    cout << "User also typed " << userCommand << '\n';
   }
-  void ls(std::string folderPath){   
-    cout << "User typed winct dir.ls" << '\n';
+  void ls(std::string userCommand){   
+    cout << "User also typed " << userCommand << '\n';
   }
-  void make(std::string folderPath, std::string folderName){
-    cout << "User typed winct dir.make" << '\n';
+  void make(std::string userCommand){
+    cout << "User also typed " << userCommand << '\n';
   }
-  void open(std::string folderPath){
-    cout << "User typed winct dir.open" << '\n';
+  void open(std::string userCommand){
+    cout << "User also typed " << userCommand << '\n';
   }
-  void zip(std::string folderPath){
-    cout << "User typed winct dir.zip" << '\n';
+  void zip(std::string userCommand){
+    cout << "User also typed " << userCommand << '\n';
   }
 };
 
 class File{
   public:
-  void del(std::string filePath){  
-    cout << "User typed winct file.del" << '\n';
-    cout << "User also typed " << filePath << '\n';
+  void del(std::string userCommand){
+    userCommand.erase(0, 14);
+    cout << "User also typed " << userCommand << '\n';
   }
-  void info(std::string filePath){ 
-    cout << "User typed winct file.info" << '\n'; 
-    cout << "User also typed " << filePath << '\n';
+  void info(std::string userCommand){
+    cout << "User also typed " << userCommand << '\n';
   }
-  void make(std::string filePath, std::string fileName){ 
-    cout << "User typed winct file.make" << '\n';
-    cout << "User also typed " << filePath << '\n';
-    cout << "User also typed " << fileName << '\n';
+  void make(std::string userCommand){
+    cout << "User also typed " << userCommand << '\n';
   }
-  void open(std::string filePath){
-    cout << "User typed winct file.open" << '\n'; 
-    cout << "User also typed " << filePath << '\n';
+  void open(std::string userCommand){
+    cout << "User also typed " << userCommand << '\n';
   }
 };
 
 class Sys{
   public:
-  void info(){        cout << "User typed winct system.info" << '\n'; }
+  void info(){  cout << "User typed winct system.info" << '\n'; }
 
   static void lock(){
     if(LockWorkStation() != true){
       cout << "winct could not lock your workstation" << '\n';
+    }
+    else{
+      LockWorkStation();
     }
   }
 
@@ -68,7 +67,10 @@ class Sys{
   void shutdown(){    cout << "User typed winct system.shutdown" << '\n'; }
   void sleep(){       cout << "User typed winct system.sleep" << '\n'; }
   void uptime(){      cout << "User typed winct system.uptime" << '\n'; }
-  void vol(){         cout << "User typed winct system.vol" << '\n'; }
+
+  void vol(){
+    cout << "User typed winct system.vol" << '\n';
+  }
 };
 
 class Winct{ public:
@@ -133,7 +135,8 @@ class Winct{ public:
 int main(){
 
   // declaring all vars at the top :3
-  std::string userinput;
+  std::string userCommand;
+  std::string userInput;
   int dicemax = 0;
   int dicemin = 0;
 
@@ -147,111 +150,110 @@ int main(){
   WINCT::Winct winct;
 
   cout << "Type in [ winct.help ] for commands" << '\n';
-  std::getline(std::cin >> std::ws, userinput);
+  std::getline(std::cin >> std::ws, userCommand);
 
 // TODO: convert if's to switches
 
 // app commands
-  if (userinput == "winct app.open"){
+  if (userCommand == "winct app.open"){
     app.open();
   }
   
-  else if (userinput == "winct app.uninstall"){
+  else if (userCommand == "winct app.uninstall"){
     app.uninstall();
   }
 
 
 // file commands
-  else if (userinput == "winct file.del"){
-    WINCT::File::del;
-    // file.del();
+  else if (userCommand == "winct file.del"){
+    file.del(userCommand);
   }
 
-  else if (userinput == "winct file.info"){
-    WINCT::File::info;
+  else if (userCommand == "winct file.info"){
+    file.info(userCommand);
   }
 
-  else if (userinput == "winct file.make"){
-    WINCT::File::make;
+  else if (userCommand == "winct file.make"){
+    file.make(userCommand);
   }
 
-  else if (userinput == "winct file.open"){
-    WINCT::File::open;
+  else if (userCommand == "winct file.open"){
+    file.open(userCommand);
   }
 
 
 // folder commands
-  else if (userinput == "winct dir.del"){
-    WINCT::Dir::del;
+  else if (userCommand == "winct dir.del"){
+    dir.del(userCommand);
   }
-  else if (userinput == "winct dir.ls"){
-    WINCT::Dir::ls;
+  else if (userCommand == "winct dir.ls"){
+    dir.ls(userCommand);
   }
-  else if (userinput == "winct dir.make"){
-    WINCT::Dir::make;
+  else if (userCommand == "winct dir.make"){
+    dir.make(userCommand);
   }
-  else if (userinput == "winct dir.open"){
-    WINCT::Dir::open;
+  else if (userCommand == "winct dir.open"){
+    dir.open(userCommand);
   }
-  else if (userinput == "winct dir.zip"){
-    WINCT::Dir::zip;
+  else if (userCommand == "winct dir.zip"){
+    dir.zip(userCommand);
   }
 
 
 // system commands
-  else if (userinput == "winct sys.info"){
+  else if (userCommand == "winct sys.info"){
     system.info();
   }
 
-  else if (userinput == "winct system.lock"){
+  else if (userCommand == "winct sys.lock"){
     system.lock();
   }
 
-  else if (userinput == "winct sys.restart"){
+  else if (userCommand == "winct sys.restart"){
     system.restart();
   }
-  
-  else if (userinput == "winct sys.shutdown"){
+
+  else if (userCommand == "winct sys.shutdown"){
     system.shutdown();
   }
-  
-  else if (userinput == "winct sys.sleep"){
+
+  else if (userCommand == "winct sys.sleep"){
     system.sleep();
   }
-  
-  else if (userinput == "winct sys.uptime"){
+
+  else if (userCommand == "winct sys.uptime"){
     system.uptime();
   }
-  
-  else if (userinput == "winct sys.vol"){
+
+  else if (userCommand == "winct sys.vol"){
     system.vol();
   }
 
 
 // WINCT commands
-  else if (userinput == "winct.coinflip"){
+  else if (userCommand == "winct.coinflip"){
     winct.coinflip();
   }
 
-  else if (userinput == "winct.diceroll"){
+  else if (userCommand == "winct.diceroll"){
     winct.diceroll(dicemax, dicemin);
     cout << "You rolled a " << randnum << '\n';
   }
 
-  else if (userinput == "winct.help"){
+  else if (userCommand == "winct.help"){
     winct.help();
   }
 
-  else if (userinput == "winct.joke"){
+  else if (userCommand == "winct.joke"){
     winct.joke();
   }
 
-  else if (userinput == "winct.quote"){
+  else if (userCommand == "winct.quote"){
     winct.quote();
   }
 
   else{
-    cout << "User Typed \"" << userinput << "\" which was not valid" << '\n';
+    cout << "User Typed \"" << userCommand << "\" which was not valid" << '\n';
   }
 
 return 0;
