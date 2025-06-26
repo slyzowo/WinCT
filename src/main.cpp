@@ -14,24 +14,47 @@ class App{
   void uninstall(){ cout << "User typed winct app.uninstall" << '\n'; }
 };
 
-class File{
-  public:
-  void del(){  cout << "User typed winct file.del" << '\n'; }
-  void info(){ cout << "User typed winct file.info" << '\n'; }
-  void make(){ cout << "User typed winct file.make" << '\n'; }
-  void open(){ cout << "User typed winct file.open" << '\n'; }
-};
-
 class Dir{
   public:
-  void del(){  cout << "User typed winct dir.del" << '\n'; }
-  void ls(){   cout << "User typed winct dir.ls" << '\n'; }
-  void make(){ cout << "User typed winct dir.make" << '\n'; }
-  void open(){ cout << "User typed winct dir.open" << '\n'; }
-  void zip(){  cout << "User typed winct dir.zip" << '\n'; }
+  void del(std::string folderPath){  
+    cout << "User typed winct dir.del" << '\n';
+  }
+  void ls(std::string folderPath){   
+    cout << "User typed winct dir.ls" << '\n';
+  }
+  void make(std::string folderPath, std::string folderName){
+    cout << "User typed winct dir.make" << '\n';
+  }
+  void open(std::string folderPath){
+    cout << "User typed winct dir.open" << '\n';
+  }
+  void zip(std::string folderPath){
+    cout << "User typed winct dir.zip" << '\n';
+  }
 };
 
-class System{
+class File{
+  public:
+  void del(std::string filePath){  
+    cout << "User typed winct file.del" << '\n';
+    cout << "User also typed " << filePath << '\n';
+  }
+  void info(std::string filePath){ 
+    cout << "User typed winct file.info" << '\n'; 
+    cout << "User also typed " << filePath << '\n';
+  }
+  void make(std::string filePath, std::string fileName){ 
+    cout << "User typed winct file.make" << '\n';
+    cout << "User also typed " << filePath << '\n';
+    cout << "User also typed " << fileName << '\n';
+  }
+  void open(std::string filePath){
+    cout << "User typed winct file.open" << '\n'; 
+    cout << "User also typed " << filePath << '\n';
+  }
+};
+
+class Sys{
   public:
   void info(){        cout << "User typed winct system.info" << '\n'; }
 
@@ -113,10 +136,15 @@ int main(){
   std::string userinput;
   int dicemax = 0;
   int dicemin = 0;
-  
-  srand(time(NULL)); // seed uses current time
-  WINCT::Winct winct;
+
+  srand(time(NULL)); // seeding current time
+
+// declaring all classes in main
   WINCT::App app;
+  WINCT::Dir dir;
+  WINCT::File file;
+  WINCT::Sys system;
+  WINCT::Winct winct;
 
   cout << "Type in [ winct.help ] for commands" << '\n';
   std::getline(std::cin >> std::ws, userinput);
@@ -125,17 +153,18 @@ int main(){
 
 // app commands
   if (userinput == "winct app.open"){
-    WINCT::App::open;
+    app.open();
   }
-
+  
   else if (userinput == "winct app.uninstall"){
-    WINCT::App::uninstall;
+    app.uninstall();
   }
 
 
 // file commands
   else if (userinput == "winct file.del"){
     WINCT::File::del;
+    // file.del();
   }
 
   else if (userinput == "winct file.info"){
@@ -171,31 +200,31 @@ int main(){
 
 // system commands
   else if (userinput == "winct sys.info"){
-    WINCT::System::info;
+    system.info();
   }
 
   else if (userinput == "winct system.lock"){
-    WINCT::System::lock();
+    system.lock();
   }
 
   else if (userinput == "winct sys.restart"){
-    WINCT::System::restart;
+    system.restart();
   }
-
+  
   else if (userinput == "winct sys.shutdown"){
-    WINCT::System::shutdown;
+    system.shutdown();
   }
-
+  
   else if (userinput == "winct sys.sleep"){
-    WINCT::System::sleep;
+    system.sleep();
   }
-
+  
   else if (userinput == "winct sys.uptime"){
-    WINCT::System::uptime;
+    system.uptime();
   }
-
+  
   else if (userinput == "winct sys.vol"){
-    WINCT::System::vol;
+    system.vol();
   }
 
 

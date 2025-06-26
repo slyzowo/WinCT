@@ -24,7 +24,7 @@ A Windows Command Line Interface Tool
 > These commands do not work yet.
 - ❌ `winct dir.del <Folder-Path>`
 - ❌ `winct dir.ls <Folder-Path>`
-- ❌ `winct dir.make <Folder-Path>`
+- ❌ `winct dir.make <Folder-Path> <Folder-Name>`
 - ❌ `winct dir.open <Folder-Path>`
 - ❌ `winct dir.zip <Folder-Path>`
 
