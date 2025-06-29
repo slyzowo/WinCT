@@ -10,43 +10,46 @@ namespace WINCT{
 
 class App{
   public:
-  void open(){      cout << "User typed winct app.open" << '\n'; }
-  void uninstall(){ cout << "User typed winct app.uninstall" << '\n'; }
+  void open(std::string userInput){
+    cout << "User typed winct app.open" << '\n';
+  }
+  void uninstall(std::string userInput){
+    cout << "User typed winct app.uninstall" << '\n';
+  }
 };
 
 class Dir{
   public:
-  void del(std::string userCommand){  
-    cout << "User also typed " << userCommand << '\n';
+  void del(std::string userInput){  
+    cout << "User also typed " << userInput << '\n';
   }
-  void ls(std::string userCommand){   
-    cout << "User also typed " << userCommand << '\n';
+  void ls(std::string userInput){   
+    cout << "User also typed " << userInput << '\n';
   }
-  void make(std::string userCommand){
-    cout << "User also typed " << userCommand << '\n';
+  void make(std::string userInput){
+    cout << "User also typed " << userInput << '\n';
   }
-  void open(std::string userCommand){
-    cout << "User also typed " << userCommand << '\n';
+  void open(std::string userInput){
+    cout << "User also typed " << userInput << '\n';
   }
-  void zip(std::string userCommand){
-    cout << "User also typed " << userCommand << '\n';
+  void zip(std::string userInput){
+    cout << "User also typed " << userInput << '\n';
   }
 };
 
 class File{
   public:
-  void del(std::string userCommand){
-    userCommand.erase(0, 14);
-    cout << "User also typed " << userCommand << '\n';
+  void del(std::string userInput){
+    cout << "User also typed " << userInput << '\n';
   }
-  void info(std::string userCommand){
-    cout << "User also typed " << userCommand << '\n';
+  void info(std::string userInput){
+    cout << "User also typed " << userInput << '\n';
   }
-  void make(std::string userCommand){
-    cout << "User also typed " << userCommand << '\n';
+  void make(std::string userInput){
+    cout << "User also typed " << userInput << '\n';
   }
-  void open(std::string userCommand){
-    cout << "User also typed " << userCommand << '\n';
+  void open(std::string userInput){
+    cout << "User also typed " << userInput << '\n';
   }
 };
 
@@ -156,47 +159,51 @@ int main(){
 
 // app commands
   if (userCommand == "winct app.open"){
-    app.open();
+    cout << "what app would you like to open?" << '\n';
+    cin >> userInput;
+    app.open(userInput);
   }
   
   else if (userCommand == "winct app.uninstall"){
-    app.uninstall();
+    cout << "what app would you like to uninstall?" << '\n';
+    cin >> userInput;
+    app.uninstall(userInput);
   }
 
 
 // file commands
   else if (userCommand == "winct file.del"){
-    file.del(userCommand);
+    file.del(userInput);
   }
 
   else if (userCommand == "winct file.info"){
-    file.info(userCommand);
+    file.info(userInput);
   }
 
   else if (userCommand == "winct file.make"){
-    file.make(userCommand);
+    file.make(userInput);
   }
 
   else if (userCommand == "winct file.open"){
-    file.open(userCommand);
+    file.open(userInput);
   }
 
 
 // folder commands
   else if (userCommand == "winct dir.del"){
-    dir.del(userCommand);
+    dir.del(userInput);
   }
   else if (userCommand == "winct dir.ls"){
-    dir.ls(userCommand);
+    dir.ls(userInput);
   }
   else if (userCommand == "winct dir.make"){
-    dir.make(userCommand);
+    dir.make(userInput);
   }
   else if (userCommand == "winct dir.open"){
-    dir.open(userCommand);
+    dir.open(userInput);
   }
   else if (userCommand == "winct dir.zip"){
-    dir.zip(userCommand);
+    dir.zip(userInput);
   }
 
 
