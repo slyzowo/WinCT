@@ -38,8 +38,8 @@ All the commands we have and plan to add
 > Most of these commands do not work yet.
 - ❌ `winct sys.info`
 - ✅ `winct sys.lock`
-- ❌ `winct sys.restart`
-- ❌ `winct sys.shutdown`
+- ✅ `winct sys.restart`
+- ✅ `winct sys.shutdown`
 - ❌ `winct sys.sleep`
 - ❌ `winct sys.uptime`
 - ❌ `winct sys.vol <Number 1-100>`

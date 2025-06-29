@@ -62,6 +62,11 @@ class File{
 
 class Sys{
   public:
+  /*
+    /t is time
+    /s is shutdown
+    /r is restart
+  */
   void info(){  cout << "User typed winct system.info" << '\n'; }
 
   static void lock(){
@@ -74,11 +79,13 @@ class Sys{
   }
 
   void restart(){
-    cout << "User typed winct system.restart" << '\n';
+    system("c:\\windows\\system32\\shutdown /r /t 1");
   }
+
   void shutdown(){
-    cout << "User typed winct system.shutdown" << '\n';
+    system("c:\\windows\\system32\\shutdown /s /t 1");
   }
+
   void sleep(){
     cout << "User typed winct system.sleep" << '\n';
   }
