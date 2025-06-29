@@ -45,8 +45,6 @@ All the commands we have and plan to add
 - ❌ `winct sys.vol <Number 1-100>`
 
 ### WinCT Commands
-> [!WARNING]
-> Most of these commands do not work yet.
 - ✅ `winct.coinflip`
 - ✅ `winct.diceroll <Max-Number> <Min-Number>`
 - ✅ `winct.help`
