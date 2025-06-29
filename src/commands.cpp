@@ -92,10 +92,6 @@ class Sys{
   void uptime(){
     cout << "User typed winct system.uptime" << '\n';
   }
-
-  void vol(){
-    cout << "User typed winct system.vol" << '\n';
-  }
 };
 
 class Winct{ public:
@@ -145,7 +141,6 @@ class Winct{ public:
     cout << "winct sys.shutdown" << '\n';
     cout << "winct sys.sleep" << '\n';
     cout << "winct sys.uptime" << '\n';
-    cout << "winct sys.vol" << '\n';
     cout << "winct.coinflip" << '\n';
     cout << "winct.diceroll" << '\n';
     cout << "winct.help" << '\n';

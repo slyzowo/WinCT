@@ -10,6 +10,9 @@ As of right now, you need to compile the program and after run it each time to u
 ## Commands
 All the commands we have and plan to add
 
+>[!TIP]
+> If all the commands in that section are working then there wont be any checks or x's
+
 ### App Commands
 > [!WARNING]
 > These commands do not work yet.
@@ -42,9 +45,8 @@ All the commands we have and plan to add
 - ✅ `winct sys.shutdown`
 - ❌ `winct sys.sleep`
 - ❌ `winct sys.uptime`
-- ❌ `winct sys.vol <Number 1-100>`
 
 ### WinCT Commands
-- ✅ `winct.coinflip`
-- ✅ `winct.diceroll <Max-Number> <Min-Number>`
-- ✅ `winct.help`
+- `winct.coinflip`
+- `winct.diceroll <Max-Number> <Min-Number>`
+- `winct.help`

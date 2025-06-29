@@ -99,11 +99,6 @@ int main(){
     system.uptime();
   }
 
-  else if (userCommand == "winct sys.vol"){
-    system.vol();
-  }
-
-
 // WINCT commands
   else if (userCommand == "winct.coinflip"){
     winct.coinflip();
