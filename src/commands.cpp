@@ -6,6 +6,13 @@ using std::cin;
 
 int randnum = 0; // needed to make this global as several functions require this
 
+/*
+  how are these organized?
+
+  they're organized like `WINCT > APP > open`
+  think of them somewhat like folders
+*/
+
 namespace WINCT{
 
 class App{
@@ -66,10 +73,18 @@ class Sys{
     }
   }
 
-  void restart(){     cout << "User typed winct system.restart" << '\n'; }
-  void shutdown(){    cout << "User typed winct system.shutdown" << '\n'; }
-  void sleep(){       cout << "User typed winct system.sleep" << '\n'; }
-  void uptime(){      cout << "User typed winct system.uptime" << '\n'; }
+  void restart(){
+    cout << "User typed winct system.restart" << '\n';
+  }
+  void shutdown(){
+    cout << "User typed winct system.shutdown" << '\n';
+  }
+  void sleep(){
+    cout << "User typed winct system.sleep" << '\n';
+  }
+  void uptime(){
+    cout << "User typed winct system.uptime" << '\n';
+  }
 
   void vol(){
     cout << "User typed winct system.vol" << '\n';

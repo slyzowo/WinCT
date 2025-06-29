@@ -4,14 +4,19 @@ A Windows Command Line Interface Tool
 > [!WARNING]
 > This application is in ALPHA and will be updated often.
 
+## How to install
+As of right now, you need to compile the program and after run it each time to use. This will be fixed in the future.
 
-## App Commands
+## Commands
+All the commands we have and plan to add
+
+# App Commands
 > [!WARNING]
 > These commands do not work yet.
 - ❌ `winct app.open <Application-Name>`
 - ❌ `winct app.uninstall <Application-Name>`
 
-## File Commands
+# File Commands
 > [!WARNING]
 > These commands do not work yet.
 - ❌ `winct file.del <File-Path>`
@@ -19,7 +24,7 @@ A Windows Command Line Interface Tool
 - ❌ `winct file.make <Folder-Path> <File-Name>`
 - ❌ `winct file.open <Folder-Path>`
 
-## Directory Commands
+# Directory Commands
 > [!WARNING]
 > These commands do not work yet.
 - ❌ `winct dir.del <Folder-Path>`
@@ -28,7 +33,7 @@ A Windows Command Line Interface Tool
 - ❌ `winct dir.open <Folder-Path>`
 - ❌ `winct dir.zip <Folder-Path>`
 
-## System Commands
+# System Commands
 > [!WARNING]
 > Most of these commands do not work yet.
 - ❌ `winct sys.info`
@@ -39,11 +44,11 @@ A Windows Command Line Interface Tool
 - ❌ `winct sys.uptime`
 - ❌ `winct sys.vol <Number 1-100>`
 
-## WinCT Commands
+# WinCT Commands
 > [!WARNING]
 > Most of these commands do not work yet.
-- ✅ `winct winct.coinflip`
-- ✅ `winct winct.diceroll <Max-Number> <Min-Number>`
-- ✅ `winct winct.help`
-- ❌ `winct winct.joke`
-- ❌ `winct winct.quote`
+- ✅ `winct.coinflip`
+- ✅ `winct.diceroll <Max-Number> <Min-Number>`
+- ✅ `winct.help`
+- ❌ `winct.joke`
+- ❌ `winct.quote`
