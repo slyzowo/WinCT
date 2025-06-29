@@ -142,9 +142,5 @@ class Winct{ public:
     cout << "winct.coinflip" << '\n';
     cout << "winct.diceroll" << '\n';
     cout << "winct.help" << '\n';
-    cout << "winct.joke" << '\n';
-    cout << "winct.quote" << '\n';
   }
-  void joke(){ cout <<  "User typed winct.joke" << '\n'; }
-  void quote(){ cout << "User typed winct.quote" << '\n'; }
 };}

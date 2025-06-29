@@ -10,13 +10,13 @@ As of right now, you need to compile the program and after run it each time to u
 ## Commands
 All the commands we have and plan to add
 
-# App Commands
+### App Commands
 > [!WARNING]
 > These commands do not work yet.
 - ❌ `winct app.open <Application-Name>`
 - ❌ `winct app.uninstall <Application-Name>`
 
-# File Commands
+### File Commands
 > [!WARNING]
 > These commands do not work yet.
 - ❌ `winct file.del <File-Path>`
@@ -24,7 +24,7 @@ All the commands we have and plan to add
 - ❌ `winct file.make <Folder-Path> <File-Name>`
 - ❌ `winct file.open <Folder-Path>`
 
-# Directory Commands
+### Directory Commands
 > [!WARNING]
 > These commands do not work yet.
 - ❌ `winct dir.del <Folder-Path>`
@@ -33,7 +33,7 @@ All the commands we have and plan to add
 - ❌ `winct dir.open <Folder-Path>`
 - ❌ `winct dir.zip <Folder-Path>`
 
-# System Commands
+### System Commands
 > [!WARNING]
 > Most of these commands do not work yet.
 - ❌ `winct sys.info`
@@ -44,11 +44,9 @@ All the commands we have and plan to add
 - ❌ `winct sys.uptime`
 - ❌ `winct sys.vol <Number 1-100>`
 
-# WinCT Commands
+### WinCT Commands
 > [!WARNING]
 > Most of these commands do not work yet.
 - ✅ `winct.coinflip`
 - ✅ `winct.diceroll <Max-Number> <Min-Number>`
 - ✅ `winct.help`
-- ❌ `winct.joke`
-- ❌ `winct.quote`

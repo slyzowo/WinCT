@@ -1,6 +1,3 @@
-#include <iostream>     // input & output
-#include <windows.h>    // for perms 
-#include <ctime>        // for random numbers
 #include "commands.cpp" // for our commands
 using std::cout;
 using std::cin;
@@ -119,14 +116,6 @@ int main(){
 
   else if (userCommand == "winct.help"){
     winct.help();
-  }
-
-  else if (userCommand == "winct.joke"){
-    winct.joke();
-  }
-
-  else if (userCommand == "winct.quote"){
-    winct.quote();
   }
 
   else{
