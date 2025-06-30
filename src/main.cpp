@@ -2,6 +2,14 @@
 using std::cout;
 using std::cin;
 
+void startseq(){
+cout << " _       ___            __" << '\n';
+cout << "| |     / (_)___  _____/ /_" << '\n';
+cout << "| | /| / / / __ \\/ ___/ __/" << '\n';
+cout << "| |/ |/ / / / / / /__/ /_" << '\n';
+cout << "|__/|__/_/_/ /_/\\___/\\__/" << '\n' << '\n';
+}
+
 int main(){
   
   // declaring all vars at the top :3
@@ -19,7 +27,8 @@ int main(){
   WINCT::Sys system;
   WINCT::Winct winct;
 
-  cout << "Type in [ winct.help ] for commands" << '\n';
+  startseq();
+  cout << "Type in [ winct.help ] for help" << '\n';
   std::getline(std::cin >> std::ws, userCommand);
 
 // TODO: convert if's to switches

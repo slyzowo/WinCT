@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include <windows.h>
 #include <ctime>
 using std::cout;
@@ -89,8 +90,22 @@ class Sys{
   void sleep(){
     cout << "User typed winct system.sleep" << '\n';
   }
+
   void uptime(){
+/*
+  Uptime is in milliseconds
+
+  Milliseconds -> Seconds -> Minutes -> Hours
+*/
+
+    int uptime = GetTickCount();
+    int uptimeSeconds =  floor(uptime / 1000);
+    int uptimeMinutes =  floor(uptimeSeconds / 60);
+    int uptimeHours =    floor(uptimeMinutes / 60);
+        uptimeMinutes =  uptimeMinutes % 60;
+
     cout << "User typed winct system.uptime" << '\n';
+    cout << "System Uptime : " << uptimeHours << " Hrs & " << uptimeMinutes << " Mins" << '\n';
   }
 };
 

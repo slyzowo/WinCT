@@ -7,34 +7,34 @@ A Windows Command Line Interface Tool
 ## How to install
 As of right now, you need to compile the program and after run it each time to use. This will be fixed in the future.
 
+### Device support
+As of right now Winct only intentionally supports Windows 11, but compatibility with other Windows versions are probably there
+
 ## Commands
 All the commands we have and plan to add
 
->[!TIP]
-> If all the commands in that section are working then there wont be any checks or x's
-
-### App Commands
+### ❌ App Commands
 > [!WARNING]
 > These commands do not work yet.
-- ❌ `winct app.open <Application-Name>`
-- ❌ `winct app.uninstall <Application-Name>`
+- `winct app.open <Application-Name>`
+- `winct app.uninstall <Application-Name>`
 
-### File Commands
+### ❌ File Commands
 > [!WARNING]
 > These commands do not work yet.
-- ❌ `winct file.del <File-Path>`
-- ❌ `winct file.info <File-Path>`
-- ❌ `winct file.make <Folder-Path> <File-Name>`
-- ❌ `winct file.open <Folder-Path>`
+- `winct file.del <File-Path>`
+- `winct file.info <File-Path>`
+- `winct file.make <Folder-Path> <File-Name>`
+- `winct file.open <Folder-Path>`
 
-### Directory Commands
+### ❌ Directory Commands
 > [!WARNING]
 > These commands do not work yet.
-- ❌ `winct dir.del <Folder-Path>`
-- ❌ `winct dir.ls <Folder-Path>`
-- ❌ `winct dir.make <Folder-Path> <Folder-Name>`
-- ❌ `winct dir.open <Folder-Path>`
-- ❌ `winct dir.zip <Folder-Path>`
+- `winct dir.del <Folder-Path>`
+- `winct dir.ls <Folder-Path>`
+- `winct dir.make <Folder-Path> <Folder-Name>`
+- `winct dir.open <Folder-Path>`
+- `winct dir.zip <Folder-Path>`
 
 ### System Commands
 > [!WARNING]
@@ -44,7 +44,7 @@ All the commands we have and plan to add
 - ✅ `winct sys.restart`
 - ✅ `winct sys.shutdown`
 - ❌ `winct sys.sleep`
-- ❌ `winct sys.uptime`
+- ✅ `winct sys.uptime`
 
 ### WinCT Commands
 - `winct.coinflip`
