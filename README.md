@@ -37,8 +37,6 @@ All the commands we have and plan to add
 - `winct dir.zip <Folder-Path>`
 
 ### System Commands
-> [!WARNING]
-> Most of these commands do not work yet.
 - `winct sys.lock`
 - `winct sys.restart`
 - `winct sys.shutdown`

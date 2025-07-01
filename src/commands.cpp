@@ -53,9 +53,13 @@ class File{
   void info(std::string userInput){
     cout << "User also typed " << userInput << '\n';
   }
+
   void make(std::string userInput){
-    cout << "User also typed " << userInput << '\n';
+    FILE *pF = fopen("test.txt", "w");
+    fprintf(pF, "Patrick star");
+    fclose(pF);
   }
+
   void open(std::string userInput){
     cout << "User also typed " << userInput << '\n';
   }
