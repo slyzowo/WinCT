@@ -68,7 +68,6 @@ class Sys{
     /s is shutdown
     /r is restart
   */
-  void info(){  cout << "User typed winct system.info" << '\n'; }
 
   static void lock(){
     if(LockWorkStation() != true){
@@ -87,14 +86,9 @@ class Sys{
     system("c:\\windows\\system32\\shutdown /s /t 1");
   }
 
-  void sleep(){
-    cout << "User typed winct system.sleep" << '\n';
-  }
-
   void uptime(){
 /*
   Uptime is in milliseconds
-
   Milliseconds -> Seconds -> Minutes -> Hours
 */
 
@@ -139,23 +133,30 @@ class Winct{ public:
   }
 
   void help(){
+    cout << "Application Commands" << '\n';
     cout << "winct app.open" << '\n';
-    cout << "winct app.uninstall" << '\n';
+    cout << "winct app.uninstall" << '\n' << '\n';
+
+    cout << "File Commands" << '\n';
     cout << "winct file.del" << '\n';
     cout << "winct file.info" << '\n';
     cout << "winct file.make" << '\n';
-    cout << "winct file.open" << '\n';
+    cout << "winct file.open" << '\n' << '\n';
+
+    cout << "Folder Commands" << '\n';
     cout << "winct dir.del" << '\n';
     cout << "winct dir.ls" << '\n';
     cout << "winct dir.make" << '\n';
     cout << "winct dir.open" << '\n';
-    cout << "winct dir.zip" << '\n';
-    cout << "winct sys.info" << '\n';
+    cout << "winct dir.zip" << '\n' << '\n';
+
+    cout << "System Commands" << '\n';
     cout << "winct sys.lock" << '\n';
     cout << "winct sys.restart" << '\n';
     cout << "winct sys.shutdown" << '\n';
-    cout << "winct sys.sleep" << '\n';
-    cout << "winct sys.uptime" << '\n';
+    cout << "winct sys.uptime" << '\n' << '\n';
+    
+    cout << "Winct Commands" << '\n';
     cout << "winct.coinflip" << '\n';
     cout << "winct.diceroll" << '\n';
     cout << "winct.help" << '\n';

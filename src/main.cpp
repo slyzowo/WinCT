@@ -84,9 +84,6 @@ int main(){
 
 
 // system commands
-  else if (userCommand == "winct sys.info"){
-    system.info();
-  }
 
   else if (userCommand == "winct sys.lock"){
     system.lock();
@@ -98,10 +95,6 @@ int main(){
 
   else if (userCommand == "winct sys.shutdown"){
     system.shutdown();
-  }
-
-  else if (userCommand == "winct sys.sleep"){
-    system.sleep();
   }
 
   else if (userCommand == "winct sys.uptime"){
