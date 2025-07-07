@@ -13,29 +13,6 @@ As of right now Winct only intentionally supports Windows 11, but compatibility 
 ## Commands
 All the commands we have and plan to add
 
-### ❌ App Commands
-> [!WARNING]
-> These commands do not work yet.
-- `winct app.open <Application-Name>`
-- `winct app.uninstall <Application-Name>`
-
-### ❌ File Commands
-> [!WARNING]
-> These commands do not work yet.
-- `winct file.del <File-Path>`
-- `winct file.info <File-Path>`
-- `winct file.make <Folder-Path> <File-Name>`
-- `winct file.open <Folder-Path>`
-
-### ❌ Directory Commands
-> [!WARNING]
-> These commands do not work yet.
-- `winct dir.del <Folder-Path>`
-- `winct dir.ls <Folder-Path>`
-- `winct dir.make <Folder-Path> <Folder-Name>`
-- `winct dir.open <Folder-Path>`
-- `winct dir.zip <Folder-Path>`
-
 ### System Commands
 - `winct sys.lock`
 - `winct sys.restart`

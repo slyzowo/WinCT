@@ -16,55 +16,6 @@ int randnum = 0; // needed to make this global as several functions require this
 
 namespace WINCT{
 
-class App{
-  public:
-  void open(std::string userInput){
-    cout << "User typed winct app.open" << '\n';
-  }
-  void uninstall(std::string userInput){
-    cout << "User typed winct app.uninstall" << '\n';
-  }
-};
-
-class Dir{
-  public:
-  void del(std::string userInput){  
-    cout << "User also typed " << userInput << '\n';
-  }
-  void ls(std::string userInput){   
-    cout << "User also typed " << userInput << '\n';
-  }
-  void make(std::string userInput){
-    cout << "User also typed " << userInput << '\n';
-  }
-  void open(std::string userInput){
-    cout << "User also typed " << userInput << '\n';
-  }
-  void zip(std::string userInput){
-    cout << "User also typed " << userInput << '\n';
-  }
-};
-
-class File{
-  public:
-  void del(std::string userInput){
-    cout << "User also typed " << userInput << '\n';
-  }
-  void info(std::string userInput){
-    cout << "User also typed " << userInput << '\n';
-  }
-
-  void make(std::string userInput){
-    FILE *pF = fopen("test.txt", "w");
-    fprintf(pF, "Patrick star");
-    fclose(pF);
-  }
-
-  void open(std::string userInput){
-    cout << "User also typed " << userInput << '\n';
-  }
-};
-
 class Sys{
   public:
   /*
