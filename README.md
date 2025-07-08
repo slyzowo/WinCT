@@ -1,9 +1,6 @@
 # WinCT (Windows Command Tools)
 A Windows Command Line Interface Tool
 
-> [!WARNING]
-> This application is in ALPHA and will be updated often.
-
 ## How to install
 As of right now, you need to compile the program and after run it each time to use. This will be fixed in the future.
 

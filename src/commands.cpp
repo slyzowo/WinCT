@@ -34,11 +34,21 @@ class Sys{
   }
 
   void restart(){
-    system("c:\\windows\\system32\\shutdown /r /t 1");
+    if(system("c:\\windows\\system32\\shutdown /r /t 1") != true){
+      cout << "winct could not lock your workstation" << '\n';
+    }
+    else{
+      system("c:\\windows\\system32\\shutdown /r /t 1");
+    }
   }
-
+  
   void shutdown(){
-    system("c:\\windows\\system32\\shutdown /s /t 1");
+    if(system("c:\\windows\\system32\\shutdown /s /t 1") != true){
+      cout << "winct could not lock your workstation" << '\n';
+    }
+    else{
+      system("c:\\windows\\system32\\shutdown /s /t 1");
+    }
   }
 
   void uptime(){

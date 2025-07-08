@@ -3,18 +3,17 @@ using std::cout;
 using std::cin;
 
 void startseq(){
-cout << " _       ___            __" << '\n';
-cout << "| |     / (_)___  _____/ /_" << '\n';
-cout << "| | /| / / / __ \\/ ___/ __/" << '\n';
-cout << "| |/ |/ / / / / / /__/ /_" << '\n';
-cout << "|__/|__/_/_/ /_/\\___/\\__/" << '\n' << '\n';
+cout << " _       ___            __" << '\n'
+      << "| |     / (_)___  _____/ /_" << '\n'
+      << "| | /| / / / __ \\/ ___/ __/" << '\n'
+      << "| |/ |/ / / / / / /__/ /_" << '\n'
+      << "|__/|__/_/_/ /_/\\___/\\__/" << '\n' << '\n';
 }
 
 int main(){
   
   // declaring all vars at the top :3
   std::string userCommand;
-  std::string userInput;
   int dicemax = 0;
   int dicemin = 0;
 
@@ -27,6 +26,7 @@ int main(){
   startseq();
   cout << "Type in [ winct.help ] for help" << '\n';
   std::getline(std::cin >> std::ws, userCommand);
+
 
 // TODO: convert if's to switches
 // system commands
