@@ -118,6 +118,11 @@ int main(){
       userCommand[len - 1] = '\0';
   }
 
+  if (strcmp(userCommand, "winct.help") == 0) {
+      printf("Help message here.\n");
+  }
+
+
 // system commands
 
   if (strcasecmp(userCommand, "winct lock") == 0){
