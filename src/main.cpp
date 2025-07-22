@@ -28,42 +28,43 @@ int main(){
   std::getline(std::cin >> std::ws, userCommand);
 
 
-// TODO: convert if's to switches
+// TODO: Add While loop to prevent the program from closing automatically
 // system commands
+  do{
+    if (userCommand == "winct sys.lock"){
+      system.lock();
+    }
 
-  if (userCommand == "winct sys.lock"){
-    system.lock();
-  }
+    else if (userCommand == "winct sys.restart"){
+      system.restart();
+    }
 
-  else if (userCommand == "winct sys.restart"){
-    system.restart();
-  }
+    else if (userCommand == "winct sys.shutdown"){
+      system.shutdown();
+    }
 
-  else if (userCommand == "winct sys.shutdown"){
-    system.shutdown();
-  }
+    else if (userCommand == "winct sys.uptime"){
+      system.uptime();
+    }
 
-  else if (userCommand == "winct sys.uptime"){
-    system.uptime();
-  }
+    // WINCT commands
+    else if (userCommand == "winct.coinflip"){
+      winct.coinflip();
+    }
 
-// WINCT commands
-  else if (userCommand == "winct.coinflip"){
-    winct.coinflip();
-  }
+    else if (userCommand == "winct.diceroll"){
+      winct.diceroll(dicemax, dicemin);
+      cout << "You rolled a " << randnum << '\n';
+    }
 
-  else if (userCommand == "winct.diceroll"){
-    winct.diceroll(dicemax, dicemin);
-    cout << "You rolled a " << randnum << '\n';
-  }
+    else if (userCommand == "winct.help"){
+      winct.help();
+    }
 
-  else if (userCommand == "winct.help"){
-    winct.help();
-  }
-
-  else{
-    cout << "User Typed \"" << userCommand << "\" which was not valid" << '\n';
-  }
+    else{
+      cout << "User Typed \"" << userCommand << "\" which was not valid" << '\n';
+    }}
+  while(userCommand.empty());
 
 return 0;
 }
