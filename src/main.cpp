@@ -1,4 +1,5 @@
 #include "commands.cpp" // for our commands
+#include <string>
 using std::cout;
 using std::cin;
 
