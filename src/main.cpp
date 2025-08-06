@@ -24,14 +24,12 @@ int main(){
   WINCT::Sys system;
   WINCT::Winct winct;
 
+while(true){
   startseq();
   cout << "Type in [ winct.help ] for help" << '\n';
   std::getline(std::cin >> std::ws, userCommand);
 
-
-// TODO: Add While loop to prevent the program from closing automatically
 // system commands
-  do{
     if (userCommand == "winct sys.lock"){
       system.lock();
     }
@@ -64,8 +62,8 @@ int main(){
 
     else{
       cout << "User Typed \"" << userCommand << "\" which was not valid" << '\n';
-    }}
-  while(userCommand.empty());
+    }
+}
 
 return 0;
 }
