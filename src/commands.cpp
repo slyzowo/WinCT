@@ -98,23 +98,6 @@ class Winct{ public:
   }
 
   void help(){
-    cout << "Application Commands" << '\n';
-    cout << "winct app.open" << '\n';
-    cout << "winct app.uninstall" << '\n' << '\n';
-
-    cout << "File Commands" << '\n';
-    cout << "winct file.del" << '\n';
-    cout << "winct file.info" << '\n';
-    cout << "winct file.make" << '\n';
-    cout << "winct file.open" << '\n' << '\n';
-
-    cout << "Folder Commands" << '\n';
-    cout << "winct dir.del" << '\n';
-    cout << "winct dir.ls" << '\n';
-    cout << "winct dir.make" << '\n';
-    cout << "winct dir.open" << '\n';
-    cout << "winct dir.zip" << '\n' << '\n';
-
     cout << "System Commands" << '\n';
     cout << "winct sys.lock" << '\n';
     cout << "winct sys.restart" << '\n';

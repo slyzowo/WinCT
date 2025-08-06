@@ -24,9 +24,9 @@ int main(){
   WINCT::Sys system;
   WINCT::Winct winct;
 
-while(true){
   startseq();
   cout << "Type in [ winct.help ] for help" << '\n';
+  while(true){ // adds looping
   std::getline(std::cin >> std::ws, userCommand);
 
 // system commands
