@@ -14,55 +14,48 @@ void startseq(){
 int main(){
 
 // declaring all vars at the top
-  char userCommand[255];
+  char userCommand[100];
   int diceMax = 0;
   int diceMin = 0;
 
 // start sequence
   startseq();
   printf("Type in [ winct.command ] for commands");
-  while(0){
-
-// get line
   fgets(userCommand, 255, stdin);
 
 // system commands
     if (userCommand == "winct sys.lock\0"){
-      lock();
+      WINCTlock();
     }
 
     else if (userCommand == "winct sys.restart\0"){
-      restart();
+      WINCTrestart();
     }
 
     else if (userCommand == "winct sys.shutdown\0"){
-      shutdown();
+      WINCTshutdown();
     }
 
     else if (userCommand == "winct sys.uptime\0"){
-      uptime();
+      WINCTuptime();
     }
 
 // WINCT commands
     else if (userCommand == "winct.coinflip\0"){
-      coinflip();
+      WINCTcoinflip();
     }
 
     else if (userCommand == "winct.diceroll\0"){
-      diceroll(diceMax, diceMin);
+      WINCTdiceroll(diceMax, diceMin);
     }
 
     else if (userCommand == "winct.help\0"){
-      help();
+      WINCThelp();
     }
 
     else{
       printf("User Typed %s which was not valid", userCommand);
     }
-  }
-  
-
-
 
 return 0;
 }

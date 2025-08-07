@@ -8,7 +8,7 @@
 int randum = 0;
 
 // system commands
-void lock(){
+void WINCTlock(){
   if(LockWorkStation() != true){
     printf("winct could not lock your workstation\n");
   }
@@ -17,7 +17,7 @@ void lock(){
   }
 }
 
-void restart(){
+void WINCTrestart(){
   if(system("c:\\windows\\system32\\shutdown /r /t 1") != true){
     printf("winct could not lock your workstation\n");
   }
@@ -26,7 +26,7 @@ void restart(){
   }
 }
 
-void shutdown(){
+void WINCTshutdown(){
   if(system("c:\\windows\\system32\\shutdown /s /t 1") != true){
     printf("winct could not lock your workstation\n");
   }
@@ -35,7 +35,7 @@ void shutdown(){
   }
 }
 
-void uptime(){
+void WINCTuptime(){
 /*
   Uptime is in milliseconds
   Milliseconds -> Seconds -> Minutes -> Hours
@@ -50,55 +50,55 @@ void uptime(){
 }
 
 // winct
-int coinflip(){
+int WINCTcoinflip(){
   srand(time(0));
   randum = (rand() % 1) + 1;
   return randum;
 }
 
-int diceroll(int diceMax, int diceMin){
+int WINCTdiceroll(int diceMax, int diceMin){
   srand(time(0));
   randum = (rand() % diceMax) + diceMin;
   return randum;
 }
 
-int d4(){
+int WINCTd4(){
   srand(time(0));
   randum = (rand() % 4) + 1;
   return randum;
 }
 
-int d6(){
+int WINCTd6(){
   srand(time(0));
   randum = (rand() % 6) + 1;
   return randum;
 }
 
-int d8(){
+int WINCTd8(){
   srand(time(0));
   randum = (rand() % 8) + 1;
   return randum;
 }
 
-int d10(){
+int WINCTd10(){
   srand(time(0));
   randum = (rand() % 10) + 1;
   return randum;
 }
 
-int d12(){
+int WINCTd12(){
   srand(time(0));
   randum = (rand() % 12) + 1;
   return randum;
 }
 
-int d20(){
+int WINCTd20(){
   srand(time(0));
   randum = (rand() % 20) + 1;
   return randum;
 }
 
-void help(){
+void WINCThelp(){
 
   printf("System Commands\n");
   printf("Winct sys.lock\n");
