@@ -8,7 +8,7 @@ As of right now, you need to compile the program and after run it each time to u
 As of right now Winct only intentionally supports Windows 11, but compatibility with other Windows versions are probably there
 
 ## Commands
-All the commands we have and plan to add
+All the commands!
 
 ### System Commands
 - `winct sys.lock`
@@ -19,4 +19,5 @@ All the commands we have and plan to add
 ### WinCT Commands
 - `winct.coinflip`
 - `winct.diceroll <Max-Number> <Min-Number>`
+- `winct.d4``winct.d20`
 - `winct.help`
