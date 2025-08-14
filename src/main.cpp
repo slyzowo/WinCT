@@ -2,6 +2,7 @@
 #include <string>
 using std::cout;
 using std::cin;
+using std::string;
 
 void startseq(){
 cout << " _       ___            __" << '\n'
@@ -14,7 +15,7 @@ cout << " _       ___            __" << '\n'
 int main(){
   
   // declaring all vars at the top :3
-  std::string userCommand;
+  string userCommand;
   int dicemax = 0;
   int dicemin = 0;
 
@@ -27,7 +28,7 @@ int main(){
   startseq();
   cout << "Type in [ winct.help ] for help" << '\n';
   while(true){ // adds looping
-  std::getline(std::cin >> std::ws, userCommand);
+  std::getline(cin >> std::ws, userCommand);
 
 // system commands
     if (userCommand == "winct sys.lock"){
