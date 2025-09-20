@@ -2,13 +2,10 @@
 A Windows Command Line Interface Tool
 
 ## How to install
-As of right now, you need to compile the program and after run it each time to use. This will be fixed in the future.
+As of right now, you have to click on the program to run it. This will be fixed in the future.
 
 ### Device support
-As of right now Winct only intentionally supports Windows 11, but compatibility with other Windows versions are probably there
-
-## Commands
-All the commands we have and plan to add
+As of right now Winct only intentionally supports Windows 11, but compatibility with other Windows versions are more than likely available
 
 ### System Commands
 - `winct sys.lock`
