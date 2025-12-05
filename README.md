@@ -2,18 +2,24 @@
 A Windows Command Line Interface Tool
 
 ## How to install
-As of right now, you have to click on the program to run it. This will be fixed in the future.
+As of right now, you have to click on the program to run it.
 
-### Device support
-As of right now Winct only intentionally supports Windows 11, but compatibility with other Windows versions are more than likely available
+### OS support
+🟩 Windows 11
+🟨 Windows 10?
+🟥 Linux
+
+> [!WARNING]
+> Due to use of the Windows of the windows 11 api, Windows 10 support is probably there, but Linux support isnt there.
 
 ### System Commands
-- `winct sys.lock`
-- `winct sys.restart`
-- `winct sys.shutdown`
-- `winct sys.uptime`
+🟨 `winct_sys_lock`
+🟨 `winct_sys_restart`
+🟨 `winct_sys_shutdown`
+🟨 `winct_sys_uptime`
+🟨 `winct_sys_vol`
 
 ### WinCT Commands
-- `winct.coinflip`
-- `winct.diceroll <Max-Number> <Min-Number>`
-- `winct.help`
+🟨 `winct_coinflip`
+🟨 `winct_diceroll <Max-Number> <Min-Number>`
+🟨 `winct_help`
