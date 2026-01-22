@@ -6,7 +6,9 @@ As of right now, you have to click on the program to run it.
 
 ### OS support
 🟩 Windows 11
+
 🟨 Windows 10?
+
 🟥 Linux
 
 > [!WARNING]

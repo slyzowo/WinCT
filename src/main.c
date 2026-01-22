@@ -1,38 +1,70 @@
 #include <stdio.h>
+#include <math.h>
+#include <windows.h>
 #include <string.h>
+
+int randnum = 0;
 
 void start_sequence(){
   printf("WinCT is active!\n");
 }
 
 void system_lock(){
-
+  if(LockWorkStation() != true){
+    printf("WinCT could not lock your workstation");
+  }
+  else{
+    LockWorkStation();
+  }
 }
 
 void system_shutdown(){
-
+  if(system("c:\\windows\\system32\\shutdown /s /t 1") != true){
+    printf("WinCT could not shutdown your workstation");
+  }
+  else{
+    system("c:\\windows\\system32\\shutdown /s /t 1");
+  }
 }
 
 void system_restart(){
-
+  if(system("c:\\windows\\system32\\shutdown /r /t 1") != true){
+    printf("WinCT could not restart your workstation");
+  }
+  else{
+    system("c:\\windows\\system32\\shutdown /r /t 1");
+  }
 }
 
 void system_uptime(){
-
+  int uptime = GetTickCount();
+  int uptimeSeconds =  floor(uptime / 1000);
+  int uptimeMinutes =  floor(uptimeSeconds / 60);
+  int uptimeHours =    floor(uptimeMinutes / 60);
+      uptimeMinutes =  uptimeMinutes % 60;
+  printf("System Uptime : %d Hours %d Minutes", uptimeHours, uptimeMinutes);
 }
 
 void winct_coinflip(){
+  randnum = rand() % 2;
 
+  switch (randnum){
+  case 0:
+    printf("Heads");
+    break;
+    
+    case 1:
+    printf("Tails");
+    break;
+    
+    default:
+    printf("Error : %d", randnum);
+  break;
+  }
 }
 
 void winct_diceroll(int dice_max, int dice_min){
-  printf("what is the min?\n");
-  scanf("%d", dice_min);
 
-  printf("what is the max?\n");
-  scanf("%d", dice_max);
-
-  printf("DEBUG : \nDice Max : %d, Dice Min : %d", dice_max, dice_min);
 }
 
 void winct_help(){
@@ -64,29 +96,38 @@ int main(){
 
   scanf("%s", &user_input);
 
-// BTW future slyzowo, this will not compile, this is pseudocode
   if(strcmp(user_input, "winct_sys_lock")){
-    printf(" you typed %s \n", user_input);
+    system_lock();
   }
 
   else if(strcmp(user_input, "winct_sys_restart")){
-    printf(" you typed %s \n", user_input);
+    system_restart();
   }
 
   else if(strcmp(user_input, "winct_sys_shutdown")){
-    printf(" you typed %s \n", user_input);
+    system_shutdown();
   }
 
   else if(strcmp(user_input, "winct_sys_uptime")){
-    printf(" you typed %s \n", user_input);
+    system_uptime();
   }
 
   else if(strcmp(user_input, "winct_coinflip")){
-    printf(" you typed %s \n", user_input);
+    winct_coinflip();
   }
 
   else if(strcmp(user_input, "winct_diceroll")){
-    printf(" you typed %s \n", user_input);
+  printf("what is the min?\n");
+  scanf("%d", dice_min);
+
+  printf("what is the max?\n");
+  scanf("%d", dice_max);
+
+  winct_diceroll(dice_min, dice_max);
+  }
+
+  else if(strcmp(user_input, "winct_help")){
+    winct_help();
   }
 
   else{
